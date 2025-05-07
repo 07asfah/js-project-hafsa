@@ -1,0 +1,47 @@
+.home{
+    margin: 0;
+    padding: 0;
+    .container{
+        position: relative;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10rem;
+        padding-left: 5rem;
+        line-height: 2;
+    }
+    h2{
+        font-size: 48px;
+        font-weight: 700;
+        color: var(--text-color);
+        font-family: var(--font-header);
+        span{
+            color: var(--accent-color);
+        }
+    }
+    p{
+        color: color-mix(in srgb, var(--text-color), transparent 20%);
+        font-size: 24px;
+    }
+    .btn{
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 14px;
+        display: inline-block;
+        padding: 8px 30px;
+        border: 2px solid var(--accent-color);
+        border-radius: 50px;
+        transition: 0.3s;
+        text-transform: uppercase;
+        color: var(--text-color);
+        margin-top: 1.6rem;
+        &:hover{
+            background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+        }
+    }
+    .menu{
+        margin-right: 10px;
+    }
+    
+}
