@@ -1,3 +1,170 @@
+:root {
+  --background-color: #0c0b09;
+  --text-color: #ffffff;
+  --header-color: #ffffff;
+  --accent-color: #cda45e;
+  --main-color: #29261f;
+  --color: #0c0b09;
+}
 
+:root {
+  --text-default: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-header: "Playfair Display", sans-serif;
+  --nav-font: Poppins, sans-serif;
+}
+
+* {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: var(--text-default);
+}
+
+.container {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+header {
+  background-color: rgba(12, 11, 9, 0.61);
+  color: var(--default-color);
+  transition: all 0.5s;
+  z-index: 997;
+}
+header .bar {
+  height: 40px;
+  padding: 0;
+  font-size: 14px;
+  transition: all 0.8s;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+header .contact-info {
+  line-height: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+header .contact-info svg a {
+  padding-left: 5px !important;
+}
+header .contact-info a {
+  text-decoration: none;
+  transition: 0.3s ease;
+  font-size: 14px;
+}
+header .contact-info a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+header .languages ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: var(--accent-color);
+}
+header .languages ul li {
+  color: var(--accent-color);
+}
+header .languages ul li + li {
+  padding-left: 10px;
+}
+header .languages ul li + li ::before {
+  content: "/";
+  display: inline-block;
+  padding-right: 10px;
+}
+header .languages ul a {
+  font-family: var(--text-default);
+  text-decoration: none;
+}
+header .languages ul a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+header .navigation {
+  background-color: var(--background-color);
+  min-height: 60px;
+  padding: 10px 0;
+  transition: 0.3s;
+  border-bottom: 1px solid var(--background-color);
+}
+header .navigation .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .navigation .container .name {
+  line-height: 1;
+  text-decoration: none;
+}
+header .navigation .container h1 {
+  font-size: 30px;
+  margin: 0;
+  font-weight: 700;
+  font-family: var(--font-header);
+}
+header .button-book-table {
+  color: var(--text-color);
+  border: 2px solid var(--accent-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 6px 24px;
+  margin: 0 5px 0 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+header .button-book-table:hover,
+header .button-book-table :focus:hover {
+  color: var(--header-color);
+  background-color: #cda45e;
+}
+header a {
+  text-decoration: none;
+}
+header .navmenu {
+  padding: 0;
+}
+header .navmenu ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+header .navmenu ul li {
+  position: relative;
+}
+header .navmenu a,
+header .navmenu :focus {
+  color: var(--text-color);
+  padding: 18px 15px;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+header .navmenu i,
+header .navmenu :focus {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+header .navmenu li:last-child a {
+  padding-right: 0;
+}
+header .navmenu li:hover > a,
+header .navmenu .active,
+header .navmenu .active:focus {
+  color: #cda45e;
+}
 
 /*# sourceMappingURL=app.css.map */
