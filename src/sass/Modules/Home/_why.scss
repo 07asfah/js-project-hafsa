@@ -74,27 +74,40 @@
     }
 }
 
-@media (max-width:480px) {
-    .why{
-        .title{
-            padding: 3rem;
+@media (max-width: 480px) {
+    .why {
+        width: 100%;
+        overflow-x: hidden; 
+        
+        .title {
+            padding: 1.5rem;
+            width: 100%;
+            box-sizing: border-box;
         }
-        .cards{
+        
+        .cards {
             display: flex;
             flex-direction: column !important;
             align-items: center;
             justify-content: center;
-            width: 200%;
+            width: 100%; 
             padding: 0;
             margin: 0;
-            .card-item{
+            box-sizing: border-box;
+            
+            .card-item {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                margin-inline: 0vh 10vw;
-                p{
-                    width: 300px;
+                margin-inline: 0; 
+                padding: 0 1rem; 
+                box-sizing: border-box;
+                
+                p {
+                    width: 100%;
+                    max-width: 300px; 
+                    box-sizing: border-box;
                 }
             }
         }
