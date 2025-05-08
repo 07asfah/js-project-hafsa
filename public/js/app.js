@@ -75,3 +75,15 @@ var specialsData = [
     });
 }
 
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const indicators = document.querySelectorAll('.carousel-indicator');
+indicators.forEach(indicator => {
+    indicator.addEventListener('click', () => {
+    const index = parseInt(indicator.getAttribute('data-index'));
+    const slideWidth = slides[0].getBoundingClientRect().width;
+      track.style.transform = `translateX(-${slideWidth * index}px)`;
+        indicators.forEach(ind => ind.classList.remove('active'));
+        indicator.classList.add('active');
+    });
+});
