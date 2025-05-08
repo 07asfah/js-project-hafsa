@@ -1,0 +1,102 @@
+.why{
+    .title{
+        display: flex !important;
+        flex-direction: column !important;
+        padding-left: 8rem;
+        padding-top: 2rem;
+        gap: 1rem;
+        h2{
+            font-size: 20px;
+            font-weight: 500;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgb(86, 85, 85);
+            font-family: "Playfair Display", serif;
+            &::after{
+                content: "";
+                width: 120px;
+                height: 1px;
+                display: inline-block;
+                background: var(--accent-color);
+                margin: 4px 10px;
+            }
+        }
+        p{
+            color: var(--accent-color);
+            font-family: "Playfair Display", serif;
+            font-weight: 600;
+            font-size: 36px;
+        }
+    }
+    .cards{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center !important;
+        gap: 3rem;
+        padding-top: 5rem;
+        padding-left: 8rem;
+        width: 80vw;
+        .card-item{
+            background: color-mix(in srgb, #535252, transparent 80%);
+            transition: all ease-in-out 0.3s;
+            height: 100%;
+            position: relative;
+            padding: 3vh 3vw;
+            &:hover{
+                background-color: var(--accent-color);
+                color: rgb(13, 13, 13);
+            }
+            span{
+                display: block;
+                font-size: 30px;
+                font-weight: 700;
+                color: #6f6969;
+                
+            }
+            h4{
+                font-size: 24px;
+                font-weight: 600;
+                padding: 0;
+                margin: 20px 0;
+            }
+            p{
+                font-size: 20px;
+                margin: 0;
+                padding: 0;
+                color: rgb(75, 74, 74);
+                
+            }
+            
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .why{
+        .title{
+            padding: 3rem;
+        }
+        .cards{
+            display: flex;
+            flex-direction: column !important;
+            align-items: center;
+            justify-content: center;
+            width: 200%;
+            padding: 0;
+            margin: 0;
+            .card-item{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-inline: 0vh 10vw;
+                p{
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+

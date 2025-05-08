@@ -15,14 +15,15 @@
         font-size: 48px;
         font-weight: 700;
         color: var(--text-color);
-        font-family: var(--font-header);
+        font-family: "Playfair Display", serif;
         span{
             color: var(--accent-color);
         }
     }
     p{
         color: color-mix(in srgb, var(--text-color), transparent 20%);
-        font-size: 24px;
+        font-size: 20px;
+        font-family: "Roboto", sans-serif;
     }
     .btn{
         text-decoration: none;
@@ -36,6 +37,7 @@
         text-transform: uppercase;
         color: var(--text-color);
         margin-top: 1.6rem;
+        font-family: "Roboto", sans-serif;
         &:hover{
             background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
         }

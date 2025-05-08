@@ -69,12 +69,6 @@
   --color: #0c0b09;
 }
 
-:root {
-  --text-default: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-header: "Playfair Display", sans-serif;
-  --nav-font: Poppins, sans-serif;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -82,7 +76,6 @@
 
 body {
   background-color: var(--background-color);
-  font-family: var(--text-default);
 }
 
 .container {
@@ -152,7 +145,7 @@ header .languages ul {
 }
 header .languages ul li {
   color: var(--accent-color);
-  font-family: var(--font-header);
+  font-family: "Roboto", sans-serif;
 }
 header .languages ul li + li {
   padding-left: 10px;
@@ -165,7 +158,6 @@ header .languages ul li + li ::before {
 }
 header .languages ul a {
   color: rgba(232, 227, 216, 0.61);
-  font-family: var(--font-header);
 }
 header .languages ul a:hover {
   color: var(--accent-color);
@@ -196,7 +188,7 @@ header .navigation .container h1 {
   font-size: 30px;
   margin: 0;
   font-weight: 600;
-  font-family: "Playfair Display", sans-serif;
+  font-family: "Playfair Display", serif;
   font-size: 30px;
   color: var(--header-color);
 }
@@ -217,6 +209,7 @@ header .button-book-table :focus:hover {
 }
 header a {
   text-decoration: none;
+  font-family: "Roboto", sans-serif;
 }
 header .navmenu {
   padding: 0;
@@ -287,14 +280,15 @@ header img {
   font-size: 48px;
   font-weight: 700;
   color: var(--text-color);
-  font-family: var(--font-header);
+  font-family: "Playfair Display", serif;
 }
 .home h2 span {
   color: var(--accent-color);
 }
 .home p {
   color: color-mix(in srgb, var(--text-color), transparent 20%);
-  font-size: 24px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
 }
 .home .btn {
   text-decoration: none;
@@ -308,12 +302,108 @@ header img {
   text-transform: uppercase;
   color: var(--text-color);
   margin-top: 1.6rem;
+  font-family: "Roboto", sans-serif;
 }
 .home .btn:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 .home .menu {
   margin-right: 10px;
+}
+
+.why .title {
+  display: flex !important;
+  flex-direction: column !important;
+  padding-left: 8rem;
+  padding-top: 2rem;
+  gap: 1rem;
+}
+.why .title h2 {
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgb(86, 85, 85);
+  font-family: "Playfair Display", serif;
+}
+.why .title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: var(--accent-color);
+  margin: 4px 10px;
+}
+.why .title p {
+  color: var(--accent-color);
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 36px;
+}
+.why .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center !important;
+  gap: 3rem;
+  padding-top: 5rem;
+  padding-left: 8rem;
+  width: 80vw;
+}
+.why .cards .card-item {
+  background: color-mix(in srgb, #535252, transparent 80%);
+  transition: all ease-in-out 0.3s;
+  height: 100%;
+  position: relative;
+  padding: 3vh 3vw;
+}
+.why .cards .card-item:hover {
+  background-color: var(--accent-color);
+  color: rgb(13, 13, 13);
+}
+.why .cards .card-item span {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  color: #6f6969;
+}
+.why .cards .card-item h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px 0;
+}
+.why .cards .card-item p {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  color: rgb(75, 74, 74);
+}
+
+@media (max-width: 480px) {
+  .why .title {
+    padding: 3rem;
+  }
+  .why .cards {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+    width: 200%;
+    padding: 0;
+    margin: 0;
+  }
+  .why .cards .card-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: 0vh 10vw;
+  }
+  .why .cards .card-item p {
+    width: 300px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
