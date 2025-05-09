@@ -381,6 +381,9 @@ header .languages ul a {
 header .languages ul a:hover {
   color: var(--accent-color);
 }
+header .menu-toggle {
+  display: none;
+}
 header .navigation {
   background-color: #29261f;
   opacity: 0.8;
@@ -481,6 +484,72 @@ header img {
   opacity: 0.4;
 }
 
+@media screen and (max-width: 480px) {
+  header .bar {
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    height: auto;
+    text-align: center;
+  }
+  header .contact-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  header .languages {
+    margin-top: 0.5rem;
+  }
+  header .languages ul {
+    justify-content: center;
+  }
+  header .navigation .container {
+    align-items: flex-start;
+    gap: 1rem;
+    padding-inline: 1rem;
+    padding-top: 1rem;
+  }
+  header .navigation .navmenu {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: var(--main-color);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+  header .navigation .navmenu.active {
+    right: 0;
+  }
+  header .navigation .navmenu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  header .navigation .navmenu li {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  header .navigation .navmenu a {
+    width: 100%;
+  }
+  header .button-book-table {
+    display: none;
+  }
+  header .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  header .menu-toggle svg {
+    fill: var(--accent-color);
+    width: 30px;
+    height: 30px;
+  }
+}
 .home {
   margin: 0;
   padding: 0;

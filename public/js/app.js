@@ -22,6 +22,7 @@ function filterMenuItems(filter) {
     }
 });
 
+//menu
 
 var specialsData = [
     {
@@ -75,6 +76,8 @@ var specialsData = [
     });
 }
 
+
+//carousel 
 const track = document.querySelector('.carousel-track');
 const slides = Array.from(track.children);
 const indicators = document.querySelectorAll('.carousel-indicator');
@@ -87,3 +90,14 @@ indicators.forEach(indicator => {
         indicator.classList.add('active');
     });
 });
+
+//header
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".navmenu");
+    menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
+    });
+});
+  

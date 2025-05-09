@@ -104,6 +104,9 @@ header{
             
         }
     }
+    .menu-toggle {
+        display: none;
+    }
     .navigation{    
         background-color: #29261f;
         opacity: 0.8;
@@ -206,3 +209,85 @@ header{
     }
     
 }
+@media screen and (max-width: 480px) {
+        header {
+        .bar {
+            flex-direction: column;
+            padding: 0.5rem 1rem;
+            height: auto;
+            text-align: center;
+        }
+    
+        .contact-info {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+    
+        .languages {
+            margin-top: 0.5rem;
+            ul {
+            justify-content: center;
+            }
+        }
+    
+        .navigation {
+            .container {
+            align-items: flex-start;
+            gap: 1rem;
+            padding-inline: 1rem;
+            padding-top: 1rem;
+            }
+    
+            .navmenu {
+            position: fixed;
+            top: 60px; 
+            right: -100%;
+            width: 70%;
+            height: 100vh;
+            background-color: var(--main-color);
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 2rem 1.5rem;
+            transition: right 0.3s ease-in-out;
+            z-index: 999;
+            }
+    
+            .navmenu.active {
+            right: 0;
+            }
+    
+            .navmenu ul {
+            flex-direction: column;
+            width: 100%;
+            }
+    
+            .navmenu li {
+            width: 100%;
+            margin-bottom: 1rem;
+            }
+    
+            .navmenu a {
+            width: 100%;
+            }
+        }
+    
+        .button-book-table {
+            display: none;
+        }
+    
+        .menu-toggle {
+            display: block;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 1001;
+    
+            svg {
+            fill: var(--accent-color);
+            width: 30px;
+            height: 30px;
+            }
+        }
+        }
+    }
+    
