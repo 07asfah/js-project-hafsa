@@ -100,4 +100,65 @@ document.addEventListener("DOMContentLoaded", function () {
     navMenu.classList.toggle("active");
     });
 });
+
+//modal
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('bookingModal');
+    const btn = document.getElementById('bookTableBtn');
+    const closeBtn = document.querySelector('.close');
+    const form = document.getElementById('bookingForm');
+    btn.addEventListener('click', function() {
+        modal.style.display = 'block';
+    });
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Booking request submitted! We will contact you shortly.');
+        form.reset();
+        modal.style.display = 'none';
+    });
+});
+
+
+//booking
+
+let buttons = document.querySelectorAll(".button-book-table")
+buttons.forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        let myAttribute = btn.getAttribute("my-attribute")
+        let modal = document.getElementById("modal1")
+        document.body.style.overflow = "hidden"
+        modal.style.display = "initial"
+        modal.parentElement.style.display = "initial"
+
+        const closeModal = () => {
+            modal.style.display = "none"
+            modal.parentElement.style.display = "none"
+            document.body.style.overflow = "auto"
+        }
+
+        let closes = document.querySelectorAll(".btn-close")
+
+        closes.forEach(close => {
+            close.addEventListener("click", closeModal)
+        });
+
+        modal.parentElement.addEventListener("click", closeModal)
+
+    })
+
+});
+
+// testimonial 
+
   
